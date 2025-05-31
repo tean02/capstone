@@ -28,9 +28,7 @@ questions_IVD = {
 # 응답 출력
 if ivd:
     st.markdown(f'체외진단의료기기의 종류 = {ivd_type}')
-    if ivd_type == '체외진단시약':
-        st.markdown('체외진단시약은 추가질문이 없습니다.')
-    elif ivd_type == '체외진단장비':
+    if ivd_type == '체외진단장비':
         st.subheader("📍 추가 질문 응답")
         for key, question_IVD in questions_IVD.items():
             answer_IVD = st.session_state.get(key, "선택 안됨")
